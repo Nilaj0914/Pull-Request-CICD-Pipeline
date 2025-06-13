@@ -3,5 +3,5 @@ import json
 def lambda_handler(event, context):
     return{
         'statusCode': 200,
-        'body': json.dumps('Hello from new lambda')
+        'body': json.dumps('Hello lambda, this is a new workflow file')
     }
