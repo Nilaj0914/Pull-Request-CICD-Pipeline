@@ -24,8 +24,8 @@ Resources:
         - Key: Project
           Value: GithubActionTesting
 
-  Outputs:
-    S3BucketName:
-      Value: !GetAtt
-        - MyS3Bucket
-      Description: Name of hosted S3 bucket
+  # Outputs:
+  #   S3BucketName:
+  #     Value: !GetAtt
+  #       - MyS3Bucket
+  #     Description: Name of hosted S3 bucket
