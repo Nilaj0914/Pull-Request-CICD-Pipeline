@@ -16,7 +16,8 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: stack-bucket-v2'
+      BucketName: 
+        Fn::Sub: '${AWS::StackName}-${Environment}-bucket-v2'
       Tags:
         - Key: Environment
           Value: !Ref Environment

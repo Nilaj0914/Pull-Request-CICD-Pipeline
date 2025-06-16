@@ -29,9 +29,9 @@ jobs:
           aws-region: ap-south-1
 
 # Cloudformation stack validation and deployment
-      # - name: Validate Cloudformation template
-      #   run: |
-      #     aws cloudformation validate-template --template-body file://cloudformation/s3-bucket.yml
+      - name: Validate Cloudformation template
+        run: |
+          aws cloudformation validate-template --template-body file://cloudformation/s3-bucket.yml
 
       - name: Deploy our stack
         run: |
