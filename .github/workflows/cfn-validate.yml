@@ -35,7 +35,7 @@ jobs:
 
       - name: Deploy our stack
         run: |
-          stack_name="pr-test-stack-${{ github.event.pull_request.number }}"
+          stack_name="nilaj-pr-test-stack-${{ github.event.pull_request.number }}"
           aws cloudformation create-stack --stack-name $stack_name --template-body file://cloudformation/s3-bucket.yml --parameters ParameterKey=Environment,ParameterValue=test
 # Uses the github api to create a comment on the cloudformation stack deployment
       - name: Comment on the PR
@@ -65,5 +65,5 @@ jobs:
 
       - name: Delete Test Stack
         run: |
-          stack_name= "pr-test-stack-${{github.event.pull_request.number}}"
+          stack_name= "nilaj-pr-test-stack-${{github.event.pull_request.number}}"
           aws cloudformation delete-stack --stack-name $stack_name
