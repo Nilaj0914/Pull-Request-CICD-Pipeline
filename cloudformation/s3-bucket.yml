@@ -1,4 +1,4 @@
-AWsTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 bucket for CICD pull request event'
 
 #Declaring input parameters, parameter type, default value and allowed values of the parameter
@@ -16,12 +16,16 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
-    Tags:
-      - Key: Environment
-        Value: !Ref Environment
+      BucketName: 
+        Fn::Sub: '${AWS::StackName}-${Environment}-bucket'
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Project
+          Value: GithubActionTesting
 
-  Outputs:
-    BucketName:
-      Description: 'Name of the S3 bucket'
-      Value: !Ref MyS3Bucket
+  # Outputs:
+  #   BucketName:
+  #     Value: !Ref MyS3Bucket
+  #     Description: 'Name of the S3 bucket'
+      
