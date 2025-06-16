@@ -28,4 +28,4 @@ Resources:
   #   S3BucketName:
   #     Value: !GetAtt
   #       - MyS3Bucket
-  #     Description: Name of hosted S3 
+  #     Description: Name of hosted S3 bucket
