@@ -1,3 +1,5 @@
+name: Delete S3 bucket stack on merge 
+
 #trigger event for the github action workflowv to initiate
 on:
   pull_request:
