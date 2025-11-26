@@ -1,6 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 bucket for CICD pull request event'
 
+
+
 #Declaring input parameters, parameter type, default value and allowed values of the parameter
 Parameters:
   Environment:
